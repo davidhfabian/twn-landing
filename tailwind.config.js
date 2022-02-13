@@ -1,10 +1,17 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  mode: "jit", // enable tailwind just in time
-  purge: ["./index.html"],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  purge: ["src/index.html"],
+  darkMode: false,
   content: [],
   theme: {
     extend: {},
+    colors: {
+      primary: colors.purple,
+      secondary: colors.fuchsia,
+      'midnight': '#121063',
+    }
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),

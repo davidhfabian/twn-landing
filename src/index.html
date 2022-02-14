@@ -14,9 +14,20 @@
   <body>
     <div id="tab_bar"></div>
     <nav></nav>
-    <section>
-      <div id="home"></div>
-      <div id="recommend"></div>
+    <section class="w-full h-screen">
+      <div id="home">
+        <div class="w-full h-3/4">
+            <div class="flex absolute flex-col items-center p-4 space-y-96 w-full h-full">
+                <input type="search" name="search" id="search" class="p-3 rounded-full shadow-sm outline-none" placeholder="San Francisco, CA">
+                <button class="p-4 w-36 text-xl font-semibold bg-white rounded-full shadow-sm transition-all duration-500 ease-in-out transform text-primary hover:bg-primary hover:text-white hover:-translate-y-1 hover:scale-110">
+                  Explorar
+                </button>
+            </div>
+            <div class="h-full width-full">
+              <img src="./assets/img/sanFrancisco.jpg" alt="San Francisco">
+          </div>
+        </div>
+      </div>
       <div id="featured_income"></div>
     </section>
     <footer></footer>

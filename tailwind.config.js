@@ -1,17 +1,17 @@
-const customThemeColors = (theme) => {
-  return {
-    ...theme("colors"),
-    primary: '#CC2D4A',
-    secondary: '#8FA206',
-    tertiary: '#61AEC9',
-  };
+const colors = require('tailwindcss/colors')
+
+const customThemeColors = {
+  // TODO: ⚠️ Avoid version change warns colors
+  ...colors,
+  'primary': '#CC2D4A',
+  'secondary': '#8FA206',
+  'tertiary': '#61AEC9',
 }
 
 module.exports = {
-  mode: "jit",
-  purge: ["src/index.html"],
-  darkMode: false,
-  content: [],
+  content: [
+    "src/**/*.html",
+  ],
   theme: {
     extend: {
       backgroundImage: {

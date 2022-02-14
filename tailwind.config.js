@@ -1,4 +1,7 @@
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
+
+const {scrollBarUtil} = require('./src/styles/plugins')
 
 const customThemeColors = {
   // TODO: ⚠️ Avoid version change warns colors
@@ -42,6 +45,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    plugin(scrollBarUtil),
   ],
 }
